@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { v4 as uuidv4 } from "uuid";
+// import { v4 as uuidv4 } from "uuid";
 
 const userSchema = mongoose.Schema({
   uuid: { type: String, required: true, unique: true },
@@ -9,13 +9,10 @@ const userSchema = mongoose.Schema({
   role: { type: String, required: true },
 });
 
-// userSvhema = schema, Users = database table name
+// userSchema = schema, Users = database table name
 const userDB = mongoose.model("users", userSchema);
 
 export default userDB;
-
-
-
 
 // const userSchema = mongoose.Schema({
 //   uuid: { type: String, required: true, unique: true, default: uuidv4() },
